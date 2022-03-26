@@ -40,6 +40,8 @@ class Network(nn.Module):
     def forward(self, x):
         y = self.encode(x)
         y_hat, y_likelihoods = self.entropy_bottleneck(y)
+
+        #print(y_hat)
         
 #         if self.training:
 #             noise = nn.init.uniform_(torch.empty(y.shape), -0.5, 0.5)  
